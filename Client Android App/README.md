@@ -29,7 +29,7 @@ OTP For Android Verification: 000000
 The android app lets you:
 - Authenticate via phone and password.
 - Super simple sign up process with auto verification of OTP.
-- Completely ad-free.
+- Completely ad-free
 - Material Design.
 - Realtime update.
 - Update minimum order value in realtime.
