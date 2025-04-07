@@ -1,216 +1,93 @@
-# Grocery Store CMS PHP Restful API
 
-Grocery Store CMS PHP Restful API is an online grocery shop. The project is developed by using PHP/MySQL/Slim Restful API. The project has powerful backend CMS to manage grocery shop online. it has features like add items, remove items, update price, manage orders etc. Restful API ready to embed in Application using JSON data.
+# 🛒 Grocery Store Management System  
 
-### Features
+A powerful **Grocery Management System** designed for **modern retail businesses**, developed by **Resilient Matrix Technologies (RM TECH)**. Built with **PHP**, **MySQL**, and **Android (Java)**, this system streamlines inventory, orders, and deliveries while offering real-time tracking for customers and administrators.
 
-- Powerful Dashboard
-- Add , Manage Items
-- Add , Manage Category
-- Update Price
-- View Orders (Confirmed, Preparing, On Way, Dilivered)
-- Generate Bills
-- Manage Customers
-- App Token Authentication
+---
 
-| Screenshot | Screenshot |
-| --------------------- | -------------------- |
-| <img src="/sc/1.PNG"> | <img src="/sc/2.PNG"> |
-| <img src="/sc/3.PNG">| <img src="/sc/4.PNG"> |
+## 🌟 Key Features  
 
-### Config
+### **Admin CMS Features**  
+- **Dashboard Overview** - Sales analytics and quick actions  
+- **Product Management**  
+  - Add/Edit grocery items  
+  - Organize by categories (Fruits, Vegetables, Dairy, etc.)  
+- **Order Pipeline**  
+  - Track orders (Pending → Preparing → On Delivery → Completed)  
+- **Customer Management** - View order history and contact details  
+- **Promotions** - Create special offers and discounts  
 
-- Config Admin CMS. admin\includes\config.php and set your database server configurations.
+### **Android App Features**  
+- **Browse Groceries** - Filter by categories or search  
+- **Order Tracking** - Real-time status updates  
+- **Secure Checkout** - Multiple payment options  
+- **Order History** - View past purchases and receipts  
 
-```
-<?php 
-// DB credentials.
-define('DB_HOST','localhost');
-define('DB_USER','root');
-define('DB_PASS','');
-define('DB_NAME','grocery');
-// Establish database connection.
-try
-{
-$dbh = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME,DB_USER, DB_PASS,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
-}
-catch (PDOException $e)
-{
-exit("Error: " . $e->getMessage());
-}
-?>
+---
+
+## 🚀 Quick Start  
+
+### **1️⃣ Clone the repository**  
+```bash
+git clone https://github.com/Ramadhani-Yassin/Grocery-App.git
+cd Grocery-App
 ```
 
-- Config App API. app\config.php and set your database server configurations.
+### **2️⃣ Backend Setup (PHP/MySQL)**  
+1. Import database:  
+   ```bash
+   mysql -u root -p grocery < healthykitchendb.sql
+   ```
+2. Configure database:  
+   ```bash
+   cp admin/includes/config.example.php admin/includes/config.php
+   ```
+   Edit with your credentials.
 
-```
-/* DATABASE CONFIGURATION */
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
-define('DB_DATABASE', 'grocery');
-define("BASE_URL", "http://localhost/app/");
-define("SITE_KEY", 'yourSecretKey');
-```
+### **3️⃣ Android App Setup**  
+1. Open `Grocery-App/Android` in **Android Studio**  
+2. Update API base URL in:  
+   `app/src/main/java/com/rmtech/grocery/utils/ApiClient.java`  
+   ```java
+   public static final String BASE_URL = "http://your-domain.com/app/";
+   ```
+3. Build and run (Android 5.0+ required)  
 
-- Database file included in Repo. (healthykitchendb.sql)
+---
 
-### App API Requests
+## 💡 Contributing  
 
-#### Get all Category :  
-Link : yoursite.com/app/allcategory 
+We welcome contributions! 🚀 If you'd like to improve this grocery system:  
 
-```
-Request Body :
-{ 
- "token":"app963" 
-} 
+✅ Submit a **Pull Request (PR)**  
+✅ Open an **Issue** for bugs or feature requests  
 
-Response: 
-{ 
-    "feedData": [ 
-        { 
-            "id": "9", 
-            "category": "Fruits" 
-        }, 
-        { 
-            "id": "10", 
-            "category": "Juice" 
-        }, 
-        { 
-            "id": "11", 
-            "category": "Vegetables" 
-        }, 
-        { 
-            "id": "12", 
-            "category": "Salad" 
-        } 
-    ] 
-} 
-```
-#### Get Items Click on Category :  
+---
 
-Link : yoursite.com/app/getlist  
+## 📄 License  
 
-```
-Request Body : 
-{ 
- "token":"app963", 
- "categoryname":"Fruits" 
-}  
+MIT License © [Resilient Matrix Technologies](LICENSE)  
 
-Response 
-{ 
-    "feedData": [ 
-        { 
-            "id": "2", 
-            "name": "Kiwi", 
-            "category": "Fruits", 
-            "description": "no des", 
-            "price": "630", 
-            "image": "3.png", 
-            "homepage": "YES" 
-        }, 
-        { 
-            "id": "3", 
-            "name": "Apple", 
-            "category": "Fruits", 
-            "description": "No Des", 
-            "price": "110", 
-            "image": "2.png", 
-            "homepage": "YES" 
-        } 
-    ] 
-} 
+---
 
-```
-#### Save Customer Information :  
-Link : yoursite.com/app/savecustomer 
+## 🏆 Developed by  
 
-```
-Request Body : 
-{ 
- "token":"app963", 
- "fname" : "Bhinderjit", 
- "lname" : "Singh", 
- "mobile" : "7307258973", 
- "area" : "Rayya", 
- "address" : "lohgarh" 
-} 
-Response 
-{ 
-    "success": { 
-        "text": "Saved Sucessfully" 
-    } 
-}
-```
-#### Get Homepage Products :  
-Link : yoursite.com/app/homepage 
+**Resilient Matrix Technologies (RM TECH)**  
+**Empowering Businesses with Smart Tech & Financial Solutions | EST. 29 Nov 2022**  
 
-```
-Request Body : 
-{ 
- "token":"app963" 
-} 
-Response 
-{ 
-    "feedData": [ 
-        { 
-            "id": "2", 
-            "name": "Kiwi", 
-            "category": "Fruits", 
-            "description": "no des", 
-            "price": "630", 
-            "image": "3.png", 
-            "homepage": "YES" 
-        }, 
-        { 
-            "id": "3", 
-            "name": "Apple", 
-            "category": "Fruits", 
-            "description": "No Des", 
-            "price": "110", 
-            "image": "2.png", 
-            "homepage": "YES" 
-        } 
-    ] 
-} 
-```
-#### Place Order :  
-Link : yoursite.com/app/placeorder 
+<div align="center">
+  <a href="https://github.com/Ramadhani-Yassin" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+  </a>
+  <a href="https://www.linkedin.com/in/ramadhani-yassin-ramadhani/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+  <a href="mailto:yasynramah@gmail.com">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+  </a>
+  <a href="https://www.instagram.com/rm_tech.tz/" target="_blank">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram">
+  </a>
+</div>
 
-```
-Request Body : 
-{ 
- "token":"app963", 
- "fname":"bhinderjit", 
- "lname":"Singh", 
- "mobile":"9915248596", 
- "area":"Rayya", 
- "address":"Lohgarh", 
- "orderitems":[ 
-  { 
-   "itemname":"Apple", 
-   "itemquantity":"6", 
-   "itemprice":"50", 
-   "itemtotal":"300" 
-  }, 
-  { 
-   "itemname":"Lichi", 
-   "itemquantity":"1", 
-   "itemprice":"40", 
-   "itemtotal":"40" 
-  } 
-  ] 
-} 
- 
-Response 
-{ 
-    "success": { 
-        "text": "Order Placed Sucessfully" 
-    } 
-} 
-```
-
-### Happy Coding...
-### Happy Open Source..
+---
