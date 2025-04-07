@@ -1,76 +1,93 @@
-# GroceryStore-AndroidApp
 
-<img src="screen/banner.png"/>
+# 🛒 Grocery Store Management System  
 
-Grocery Store - Android app is the client side app for ordering medicines.  
-It is free and open source.  
-Grocery Store for Android is a companion app for [Grocery Store Web](https://freshmart.frontendsourcecode.com/).  
-Grocery Store WebApp is for administration of orders on the admin(DrugStore) side.
+A powerful **Grocery Management System** designed for **modern retail businesses**, developed by **Resilient Matrix Technologies (RM TECH)**. Built with **PHP**, **MySQL**, and **Android (Java)**, this system streamlines inventory, orders, and deliveries while offering real-time tracking for customers and administrators.
 
+---
 
+## 🌟 Key Features  
 
-## About
+### **Admin CMS Features**  
+- **Dashboard Overview** - Sales analytics and quick actions  
+- **Product Management**  
+  - Add/Edit grocery items  
+  - Organize by categories (Fruits, Vegetables, Dairy, etc.)  
+- **Order Pipeline**  
+  - Track orders (Pending → Preparing → On Delivery → Completed)  
+- **Customer Management** - View order history and contact details  
+- **Promotions** - Create special offers and discounts  
 
-With this app, customers can order medicines from the pharmacy it is connected to.
-The pharmacy has to host the companion administration web-app [Grocery Store Web](https://freshmart.frontendsourcecode.com/).
+### **Android App Features**  
+- **Browse Groceries** - Filter by categories or search  
+- **Order Tracking** - Real-time status updates  
+- **Secure Checkout** - Multiple payment options  
+- **Order History** - View past purchases and receipts  
 
+---
 
-## Admin Details
+## 🚀 Quick Start  
 
-[Admin Panel](https://freshmart.frontendsourcecode.com/)
+### **1️⃣ Clone the repository**  
+```bash
+git clone https://github.com/Ramadhani-Yassin/Grocery-App.git
+cd Grocery-App
+```
 
-UserName: Admin
+### **2️⃣ Backend Setup (PHP/MySQL)**  
+1. Import database:  
+   ```bash
+   mysql -u root -p grocery < healthykitchendb.sql
+   ```
+2. Configure database:  
+   ```bash
+   cp admin/includes/config.example.php admin/includes/config.php
+   ```
+   Edit with your credentials.
 
-Password: Admin@2020
+### **3️⃣ Android App Setup**  
+1. Open `Grocery-App/Android` in **Android Studio**  
+2. Update API base URL in:  
+   `app/src/main/java/com/rmtech/grocery/utils/ApiClient.java`  
+   ```java
+   public static final String BASE_URL = "http://your-domain.com/app/";
+   ```
+3. Build and run (Android 5.0+ required)  
 
-OTP For Android Verification: 000000
+---
 
-## Features
-The android app lets you:
-- Authenticate via phone and password.
-- Super simple sign up process with auto verification of OTP.
-- Completely ad-free
-- Material Design.
-- Realtime update.
-- Update minimum order value in realtime.
-- Block specific users from ordering.
-- Multiple order statuses.
-- Push notification to notifiy order status change.
+## 💡 Contributing  
 
+We welcome contributions! 🚀 If you'd like to improve this grocery system:  
 
+✅ Submit a **Pull Request (PR)**  
+✅ Open an **Issue** for bugs or feature requests  
 
-## Screenshots
+---
 
-| Splash | Login | Register |
-| ------ | ---- | ------ |
-|<img src="screen/1.png" width="230" height="500"/>|<img src="screen/2.png" width="230" height="500"/>|<img src="screen/3.png" width="230" height="500"/>|
+## 📄 License  
 
-| Home | Category | Detail |
-| ------ | ---- | ------ |
-|<img src="screen/4.png" width="230" height="500"/>|<img src="screen/5.png" width="230" height="500"/>|<img src="screen/6.png" width="230" height="500"/>|
+MIT License © [Resilient Matrix Technologies](LICENSE)  
 
-| Products | Cart | Checkout |
-| ------ | ---- | ------ |
-|<img src="screen/7.png" width="230" height="500"/>|<img src="screen/8.png" width="230" height="500"/>|<img src="screen/9.png" width="230" height="500"/>|
+---
 
-| Order | Order Details | Prescription |
-| ------ | ---- | ------ |
-|<img src="screen/10.png" width="230" height="500"/>|<img src="screen/11.png" width="230" height="500"/>|<img src="screen/12.png" width="250" height="500"/>|
+## 🏆 Developed by  
 
+**Resilient Matrix Technologies (RM TECH)**  
+**Empowering Businesses with Smart Tech & Financial Solutions | EST. 29 Nov 2022**  
 
-## Permissions
+<div align="center">
+  <a href="https://github.com/Ramadhani-Yassin" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+  </a>
+  <a href="https://www.linkedin.com/in/ramadhani-yassin-ramadhani/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+  <a href="mailto:yasynramah@gmail.com">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+  </a>
+  <a href="https://www.instagram.com/rm_tech.tz/" target="_blank">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram">
+  </a>
+</div>
 
-On Android versions prior to Android 6.0, pharmrmacy android requires the following permissions:
-- Full Network Access.
-- Read and write access to external storage - To access prescription images
-- Camera access - To capture image of prescription
-- Receive sms - To access OTP code and verify automatically
-
-## Contributing
-You are free to use and modify the app.
-
-
-## License
-
-This application is released under GNU GPLv3 (see [LICENSE](LICENSE)).
-Some of the used libraries are released under different licenses.
+---
