@@ -1,5 +1,6 @@
 package com.frontendsource.grocerystore.activity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -35,12 +36,6 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Grocery Store
- * https://github.com/quintuslabs/GroceryStore
- * Created on 18-Feb-2019.
- * Created by : Santosh Kumar Dash:- http://santoshdash.epizy.com
- */
 public class ProductViewActivity extends BaseActivity {
     private static int cart_count = 0;
     public TextView quantity, inc, dec;
@@ -58,6 +53,7 @@ public class ProductViewActivity extends BaseActivity {
     private int dotscount;
     private ImageView[] dots;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

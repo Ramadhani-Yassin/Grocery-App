@@ -14,12 +14,6 @@ import com.google.gson.Gson;
 import com.frontendsource.grocerystore.R;
 import com.frontendsource.grocerystore.model.User;
 import com.frontendsource.grocerystore.util.localstorage.LocalStorage;
-/**
- * Grocery Store
- * https://github.com/quintuslabs/GroceryStore
- * Created on 18-Feb-2019.
- * Created by : Santosh Kumar Dash:- http://santoshdash.epizy.com
- */
 
 /**
  * A simple {@link Fragment} subclass.

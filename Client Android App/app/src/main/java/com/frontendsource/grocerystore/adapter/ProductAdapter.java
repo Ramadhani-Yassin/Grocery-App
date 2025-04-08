@@ -32,12 +32,6 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Grocery Store
- * https://github.com/quintuslabs/GroceryStore
- * Created on 18-Feb-2019.
- * Created by : Santosh Kumar Dash:- http://santoshdash.epizy.com
- */
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHolder> {
 
     List<Product> productList;
@@ -142,7 +136,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
                     }
 
                     _subtotal = String.valueOf(Double.parseDouble(_price) * Integer.parseInt(_quantity));
-                    holder.subTotal.setText(_quantity + "X" + _price + "= Rs." + _subtotal);
+                    holder.subTotal.setText(_quantity + "X" + _price + "= TZS." + _subtotal);
                     Log.d("Tag : ", cartList.get(i).getId() + "-->" + product.getId());
                 }
             }
@@ -170,7 +164,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
                 }
 
                 _subtotal = String.valueOf(Double.parseDouble(_price) * total_item);
-                holder.subTotal.setText(total_item + "X" + _price + "= Rs." + _subtotal);
+                holder.subTotal.setText(total_item + "X" + _price + "= TZS." + _subtotal);
 
                 if (cartList.size() == 0 || pQuantity == 0) {
 
@@ -190,7 +184,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
                             _subtotal = String.valueOf(Double.parseDouble(holder.price.getText().toString()) * total_item);
                             cartList.get(i).setQuantity(holder.quantity.getText().toString());
                             cartList.get(i).setSubTotal(_subtotal);
-                            holder.subTotal.setText(total_item + "X" + holder.price.getText().toString() + "= Rs." + _subtotal);
+                            holder.subTotal.setText(total_item + "X" + holder.price.getText().toString() + "= TZS." + _subtotal);
                             String cartStr = gson.toJson(cartList);
                             //Log.d("CART", cartStr);
                             localStorage.setCart(cartStr);
@@ -239,7 +233,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
                 }
 
                 _subtotal = String.valueOf(Double.parseDouble(_price) * total_item);
-                holder.subTotal.setText(total_item + "X" + _price + "= Rs." + _subtotal);
+                holder.subTotal.setText(total_item + "X" + _price + "= TZS." + _subtotal);
 
 
                 if (total_item > 0) {
@@ -250,7 +244,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
                             _subtotal = String.valueOf(Double.parseDouble(holder.price.getText().toString()) * total_item);
                             cartList.get(i).setQuantity(holder.quantity.getText().toString());
                             cartList.get(i).setSubTotal(_subtotal);
-                            holder.subTotal.setText(total_item + "X" + holder.price.getText().toString() + "= Rs." + _subtotal);
+                            holder.subTotal.setText(total_item + "X" + holder.price.getText().toString() + "= TZS." + _subtotal);
                             String cartStr = gson.toJson(cartList);
                             //Log.d("CART", cartStr);
 //                            ((AddorRemoveCallbacks) context).onRemoveProduct();
@@ -294,7 +288,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
 
                 if (Integer.parseInt(_quantity) != 0) {
                     _subtotal = String.valueOf(Double.parseDouble(_price) * Integer.parseInt(_quantity));
-                    holder.subTotal.setText(_quantity + "X" + _price + "= Rs." + _subtotal);
+                    holder.subTotal.setText(_quantity + "X" + _price + "= TZS." + _subtotal);
                     if (context instanceof ProductActivity) {
                         Cart cart = new Cart(product.getId(), product.getName(), product.getImage(), product.getCurrency(), _price, _attribute, _quantity, _subtotal);
                         cartList = ((BaseActivity) context).getCartList();

@@ -248,12 +248,12 @@ $msg="Changes Sucessfully";
                         </td>
 
                         <td>
-                          <?php echo "₹".htmlentities($result->price);?> 
+                          <?php echo "TZS ".htmlentities($result->price);?> 
                           
                         </td>
 
                         <td>
-                          <?php echo "₹".htmlentities($result->discount);?> 
+                          <?php echo "TZS ".htmlentities($result->discount);?> 
                           
                         </td>
                         

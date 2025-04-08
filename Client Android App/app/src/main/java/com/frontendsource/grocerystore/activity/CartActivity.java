@@ -30,12 +30,6 @@ import com.frontendsource.grocerystore.util.localstorage.LocalStorage;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Grocery Store
- * https://github.com/quintuslabs/GroceryStore
- * Created on 18-Feb-2019.
- * Created by : Santosh Kumar Dash:- http://santoshdash.epizy.com
- */
 public class CartActivity extends BaseActivity {
     LocalStorage localStorage;
     List<Cart> cartList = new ArrayList<>();
@@ -67,7 +61,7 @@ public class CartActivity extends BaseActivity {
         emptyCart = findViewById(R.id.empty_cart_img);
         checkoutLL = findViewById(R.id.checkout_LL);
         totalPrice = findViewById(R.id.total_price);
-        totalPrice.setText("Rs. " + getTotalPrice() + "");
+        totalPrice.setText("TZS. " + getTotalPrice() + "");
         setUpCartRecyclerview();
 
 
@@ -206,7 +200,7 @@ public class CartActivity extends BaseActivity {
     @Override
     public void updateTotalPrice() {
 
-        totalPrice.setText("Rs. " + getTotalPrice() + "");
+        totalPrice.setText("TZS. " + getTotalPrice() + "");
         if (getTotalPrice() == 0.0) {
             mState = "HIDE_MENU";
             invalidateOptionsMenu();

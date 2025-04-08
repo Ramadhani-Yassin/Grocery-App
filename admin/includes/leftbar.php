@@ -117,6 +117,6 @@
  <!--     </a>-->
  <!--   </li>-->
   </ul>
-  <p class="text-center" style="color:#ffffff; margin-top: 100px;">© Quintus Labs
+  <p class="text-center" style="color:#ffffff; margin-top: 100px;">© Developed by Me
   </p>
 </nav>

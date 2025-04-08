@@ -24,12 +24,6 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-/**
- * Grocery Store
- * https://github.com/quintuslabs/GroceryStore
- * Created on 18-Feb-2019.
- * Created by : Santosh Kumar Dash:- http://santoshdash.epizy.com
- */
 public class CheckoutCartAdapter extends RecyclerView.Adapter<CheckoutCartAdapter.MyViewHolder> {
 
     List<Cart> cartList;
