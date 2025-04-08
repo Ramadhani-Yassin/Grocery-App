@@ -317,7 +317,7 @@ ul.agile_forms li{
     background: #e04646;
 }
 .bannerimg{
-    background: url(../images/banana.png) no-repeat 0px 0px;
+    background: url('../images/shopping.png') no-repeat 0px 0px;
     background-size: cover;	
 	-webkit-background-size: cover;	
 	-moz-background-size: cover;
@@ -327,7 +327,7 @@ ul.agile_forms li{
 	margin:15em 0 0;
 }
 .bannerimg1{
-    background: url(../images/apple.png) no-repeat 0px 0px;
+    background: url('../images/apple.png') no-repeat 0px 0px;
     background-size: cover;	
 	-webkit-background-size: cover;	
 	-moz-background-size: cover;
@@ -337,7 +337,7 @@ ul.agile_forms li{
 	margin:15em 0 0;
 }
 .bannerimg2{
-    background: url(../images/lemon.png) no-repeat 0px 0px;
+    background: url(../images/delivery.png) no-repeat 0px 0px;
     background-size: cover;	
 	-webkit-background-size: cover;	
 	-moz-background-size: cover;
@@ -347,7 +347,7 @@ ul.agile_forms li{
 	margin:15em 0 0;
 }
 .bannerimg3{
-    background: url(../images/orange.png) no-repeat 0px 0px;
+    background: url(../images/Dashboard.png) no-repeat 0px 0px;
     background-size: cover;	
 	-webkit-background-size: cover;	
 	-moz-background-size: cover;
@@ -503,7 +503,7 @@ h2.heading,h3.heading {
 }
 section.service-w3ls {
     background-color: #7ad1fe;
-    background: url(../images/services.jpg) no-repeat 0px 0px;
+    background: url('https://images.unsplash.com/photo-1570915474832-8006a8cd4416?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2hvcCUyMGRhcmt8ZW58MHx8MHx8fDA%3D') no-repeat 0px 0px;
     background-size: cover;
 }
 .ch-grid {
@@ -553,28 +553,28 @@ section.service-w3ls h4 {
 	transition: all 0.4s ease-in-out;
 }
 .ch-img-1 { 
-	background-image: url(../images/serv1.jpg);
+	background-image: url('https://img.freepik.com/free-photo/shopping-trolleys-packets-tags_23-2147961897.jpg?uid=R103879228&ga=GA1.1.756288325.1737489448&semt=ais_hybrid&w=740');
 }
 .ch-img-2 { 
-	background-image: url(../images/serv2.jpg);
+	background-image: url('https://img.freepik.com/premium-photo/ai-commerce-image-recognition-technology-applications-buy-things-online-final-sale_33790-1127.jpg?w=826');
 }
 .ch-img-3 { 
-	background-image: url(../images/serv3.jpg);
+	background-image: url('https://images.unsplash.com/photo-1553413077-190dd305871c?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGRlbGl2ZXJ5fGVufDB8fDB8fHww');
 }
 .ch-img-4 { 
-	background-image: url(../images/serv4.jpg);
+	background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z3JhcGh8ZW58MHx8MHx8fDA%3D');
 }
 .ch-img-5 { 
-	background-image: url(../images/serv5.jpg);
+	background-image: url('https://images.unsplash.com/photo-1668928487281-9bbf513ba27b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHNob3AlMjBmdWxsJTIwcm93c3xlbnwwfHwwfHx8MA%3D%3D');
 }
 .ch-img-6 { 
-	background-image: url(../images/serv6.jpg);
+	background-image: url('https://images.unsplash.com/photo-1638162573419-f52fde389d55?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHN0b2NrJTIwc2hvcHxlbnwwfHwwfHx8MA%3D%3D');
 }
 .ch-img-7 { 
-	background-image: url(../images/serv7.jpg);
+	background-image: url('https://images.unsplash.com/photo-1594935975218-a3596da034a3?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cm91dGV8ZW58MHx8MHx8fDA%3D');
 }
 .ch-img-8 { 
-	background-image: url(../images/serv8.jpg);
+	background-image: url('https://images.unsplash.com/photo-1575671883877-71e6519c7570?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJ1c2luZXNzJTIwcGVyZm9ybWFuY2V8ZW58MHx8MHx8fDA%3D');
 }
 .service-bottomgrids {
     margin-top: 4em;
@@ -639,6 +639,83 @@ section.service-w3ls h4 {
 	opacity: 1;
 }
 /* //services */
+
+.gallery {
+	padding: 30px;
+}
+
+.gallery .heading {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.w3ls_banner_bottom_grids {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+	max-width: 1200px;
+	margin: auto;
+}
+
+.w3layouts_gallery_grid {
+	width: calc(25% - 20px); /* 4 columns */
+	height: 300px; /* fixed height */
+	background: #fff;
+	overflow: hidden;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.w3layouts_team_grid {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.w3layouts_team_grid img {
+	height: 200px;
+	width: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.w3layouts_team_grid_pos {
+	padding: 10px;
+	background: #f9f9f9;
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wthree_text h4 {
+	margin: 0;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.wthree_text p {
+	margin: 0;
+	font-size: 14px;
+	color: #666;
+}
+
+/* Responsive layout */
+@media (max-width: 991px) {
+	.w3layouts_gallery_grid {
+		width: calc(50% - 20px);
+	}
+}
+
+@media (max-width: 600px) {
+	.w3layouts_gallery_grid {
+		width: 100%;
+	}
+}
 
 /*--team--*/
 .spldishes-w3left {
