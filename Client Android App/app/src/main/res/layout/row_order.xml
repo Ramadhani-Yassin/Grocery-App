@@ -48,7 +48,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin_10dp"
-                    android:text="Rs.500.00" />
+                    android:text="TZS. 5000.00" />
 
                 <com.frontendsource.grocerystore.customfonts.TextViewRegular
                     android:id="@+id/status"

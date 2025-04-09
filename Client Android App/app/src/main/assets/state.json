@@ -2,139 +2,127 @@
   "statelist": [
     {
       "id": 1,
-      "State": "Andaman and Nicobar Islands"
+      "State": "Dar es Salaam"
     },
     {
       "id": 2,
-      "State": "Andhra Pradesh"
+      "State": "Dodoma"
     },
     {
       "id": 3,
-      "State": "Arunachal Pradesh"
+      "State": "Geita"
     },
     {
       "id": 4,
-      "State": "Assam"
+      "State": "Iringa"
     },
     {
       "id": 5,
-      "State": "Bihar"
+      "State": "Kagera"
     },
     {
       "id": 6,
-      "State": "Chandigarh"
+      "State": "Katavi"
     },
     {
       "id": 7,
-      "State": "Chhattisgarh"
+      "State": "Kigoma"
     },
     {
       "id": 8,
-      "State": "Dadra and Nagar Haveli"
+      "State": "Kilimanjaro"
     },
     {
       "id": 9,
-      "State": "Delhi"
+      "State": "Lindi"
     },
     {
       "id": 10,
-      "State": "Goa"
+      "State": "Mara"
     },
     {
       "id": 11,
-      "State": "Gujarat"
+      "State": "Mbeya"
     },
     {
       "id": 12,
-      "State": "Haryana"
+      "State": "Morogoro"
     },
     {
       "id": 13,
-      "State": "Himachal Pradesh"
+      "State": "Mtwara"
     },
     {
       "id": 14,
-      "State": "Jammu and Kashmir"
+      "State": "Mwanza"
     },
     {
       "id": 15,
-      "State": "Jharkhand"
+      "State": "Njombe"
     },
     {
       "id": 16,
-      "State": "Karnataka"
+      "State": "Pemba North"
     },
     {
       "id": 17,
-      "State": "Karnatka"
+      "State": "Pemba South"
     },
     {
       "id": 18,
-      "State": "Kerala"
+      "State": "Rukwa"
     },
     {
       "id": 19,
-      "State": "Madhya Pradesh"
+      "State": "Ruvuma"
     },
     {
       "id": 20,
-      "State": "Maharashtra"
+      "State": "Shinyanga"
     },
     {
       "id": 21,
-      "State": "Manipur"
+      "State": "Simiyu"
     },
     {
       "id": 22,
-      "State": "Meghalaya"
+      "State": "Singida"
     },
     {
       "id": 23,
-      "State": "Mizoram"
+      "State": "Tabora"
     },
     {
       "id": 24,
-      "State": "Nagaland"
+      "State": "Tanga"
     },
     {
       "id": 25,
-      "State": "Odisha"
+      "State": "Zanzibar Urban/West"
     },
     {
       "id": 26,
-      "State": "Puducherry"
+      "State": "Zanzibar Central/South"
     },
     {
       "id": 27,
-      "State": "Punjab"
+      "State": "Zanzibar North"
     },
     {
       "id": 28,
-      "State": "Rajasthan"
+      "State": "Zanzibar South"
     },
     {
       "id": 29,
-      "State": "Tamil Nadu"
+      "State": "Arusha"
     },
     {
       "id": 30,
-      "State": "Telangana"
+      "State": "Bariadi"
     },
     {
       "id": 31,
-      "State": "Tripura"
-    },
-    {
-      "id": 32,
-      "State": "Uttar Pradesh"
-    },
-    {
-      "id": 33,
-      "State": "Uttarakhand"
-    },
-    {
-      "id": 34,
-      "State": "West Bengal"
+      "State": "Morogoro"
     }
   ]
 }

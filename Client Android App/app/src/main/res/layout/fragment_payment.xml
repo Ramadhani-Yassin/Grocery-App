@@ -362,7 +362,7 @@
                                 android:gravity="center"
                                 android:paddingLeft="6dp"
                                 android:paddingRight="6dp"
-                                android:text="CONFIRM AND PAY Rs."
+                                android:text="CONFIRM AND PAY TZS. "
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/text" />
                         </LinearLayout>

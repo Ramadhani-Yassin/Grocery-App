@@ -176,12 +176,12 @@
                                 android:layout_weight="4"
                                 android:gravity="end">
 
-                                <com.frontendsource.grocerystore.customfonts.TextViewRegular
+                                <!--<com.frontendsource.grocerystore.customfonts.TextViewRegular
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Shipping : "
                                     android:textSize="18dp"
-                                    android:textStyle="bold" />
+                                    android:textStyle="bold" />-->
 
                             </LinearLayout>
 
@@ -195,7 +195,7 @@
                                     android:id="@+id/shipping_amount"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="500 "
+                                    android:text="5000 "
                                     android:textSize="18dp" />
 
                             </LinearLayout>

@@ -119,7 +119,7 @@
                             android:paddingTop="5dp"
                             android:paddingRight="3dp"
                             android:paddingBottom="3dp"
-                            android:text="Rs."
+                            android:text="TZS. "
                             android:textColor="@color/colorPrimary"
                             android:textSize="16dp"
                             android:textStyle="bold" />

@@ -82,7 +82,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/margin_3dp"
                         android:layout_marginRight="@dimen/margin_3dp"
-                        android:text="Rs."
+                        android:text="Tzs. "
                         android:textSize="14dp" />
 
                     <com.frontendsource.grocerystore.customfonts.TextViewRegular

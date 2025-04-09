@@ -102,7 +102,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="end"
-                            android:text="Rs"
+                            android:text="TZS. "
                             android:textColor="@color/colorTex"
                             android:textSize="21dp" />
 
@@ -145,7 +145,7 @@
                         android:layout_height="28dp"
                         android:background="@drawable/rect"
                         android:gravity="center"
-                        android:text="Free Shipping"
+                        android:text="Available"
                         android:textColor="#fff"
 
                         />
@@ -162,18 +162,19 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Est. delivery"
+                            android:text=" "
                             android:textColor="@color/colorSub"
                             android:textSize="13dp" />
 
-                        <com.frontendsource.grocerystore.customfonts.TextViewRegular
+                        <!--<com.frontendsource.grocerystore.customfonts.TextViewRegular
                             android:id="@+id/date"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.8"
                             android:text="5 days Max"
                             android:textColor="@color/colorTex"
-                            android:textSize="13dp" />
+                            android:textSize="13dp" />-->
+
                     </LinearLayout>
                 </LinearLayout>
 

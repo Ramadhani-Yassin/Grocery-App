@@ -36,7 +36,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:gravity="center"
-            android:text="Thank you for your order. Our Medicine Specialist call you for your confirmation"
+            android:text="Thank you for your order. Stay On for Your Package. Karibu Tena!"
             android:textColor="@color/white"
             android:textSize="20dp" />
 
