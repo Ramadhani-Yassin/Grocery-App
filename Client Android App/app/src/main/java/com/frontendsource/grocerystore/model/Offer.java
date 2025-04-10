@@ -1,10 +1,10 @@
 package com.frontendsource.grocerystore.model;
 
-/**
- * Grocery Store
- * https://github.com/quintuslabs/GroceryStore
- * Created on 18-Feb-2019.
- * Created by : Santosh Kumar Dash:- http://santoshdash.epizy.com
+/** 
+ * Zanzibar Grocery Store App 
+ * https://github.com/Ramadhani-Yassin/Grocery-App
+ * Created on 04-April-2025. 
+ * Created by : Ramadhani Yassin Ramadhani:-https://github.com/Ramadhani-Yassin/
  */
 public class Offer {
     String id;
