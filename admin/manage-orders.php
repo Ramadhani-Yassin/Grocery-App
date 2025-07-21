@@ -172,8 +172,7 @@ $msg="Status Updated Sucessfully";
 										<th>OrderID</th>
 										<th>Name</th>
 										<th>Mobile Number</th>
-										<th>Email</th>
-										<th>Address</th>
+										<th>Delivery Address</th>
 										<th>Status</th>
 										<th>Action</th>
 										<th></th>
@@ -194,7 +193,6 @@ $msg="Status Updated Sucessfully";
 											<td><?php echo htmlentities($result->id);?></td>
 											<td><?php echo htmlentities($result->name);?> <?php echo htmlentities($result->lname);?></td>
 											<td><?php echo htmlentities($result->mobile);?></td>
-											<td><?php echo htmlentities($result->email);?></td>
 											<td><?php echo htmlentities($result->address);?></td>
 											<td><b class="text-warning"><?php echo htmlentities($result->status);?></b></td>
 											<td><a href="view-order.php?orderid=<?php echo $result->id;?>" >View Order</a></td>

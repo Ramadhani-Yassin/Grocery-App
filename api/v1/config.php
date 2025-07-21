@@ -3,12 +3,12 @@
 error_reporting(0);
 session_start();
 
-/* DATABASE CONFIGURATION */
+
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
 define('DB_DATABASE', 'grocerystore');
-define("BASE_URL", "http://192.168.108.248/grocerystore/api/v1/");
+define("BASE_URL", "http://10.106.207.248/grocerystore/api/v1/");
 define("SITE_KEY", 'AIzjdsfs212nkcbcxzfssd');
 
 
@@ -23,7 +23,6 @@ function getDB()
 	$dbConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	return $dbConnection;
 }
-/* DATABASE CONFIGURATION END */
 
 
 ?>

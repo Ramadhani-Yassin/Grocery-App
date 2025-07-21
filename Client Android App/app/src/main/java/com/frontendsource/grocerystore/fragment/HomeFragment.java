@@ -368,13 +368,17 @@ hideProgressDialog();
 
     @Override
     public void onStop() {
-        timer.cancel();
+        if (timer != null) {
+            timer.cancel();
+        }
         super.onStop();
     }
 
     @Override
     public void onPause() {
-        timer.cancel();
+        if (timer != null) {
+            timer.cancel();
+        }
         super.onPause();
     }
 

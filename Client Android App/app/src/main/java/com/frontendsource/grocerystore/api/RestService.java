@@ -8,6 +8,7 @@ import com.frontendsource.grocerystore.model.OfferResult;
 import com.frontendsource.grocerystore.model.OrderItem;
 import com.frontendsource.grocerystore.model.OrdersResult;
 import com.frontendsource.grocerystore.model.PlaceOrder;
+import com.frontendsource.grocerystore.model.PaymentInfo;
 import com.frontendsource.grocerystore.model.ProductResult;
 import com.frontendsource.grocerystore.model.Token;
 import com.frontendsource.grocerystore.model.User;
@@ -86,6 +87,8 @@ public interface RestService {
     @POST("api/v1/singleOrderDetails")
     Call<OrdersResult> getOrderItems(@Body OrderItem orderItem);
 
+    @POST("api/v1/payment")
+    Call<Void> submitPayment(@Body PaymentInfo paymentInfo);
 
 
 }

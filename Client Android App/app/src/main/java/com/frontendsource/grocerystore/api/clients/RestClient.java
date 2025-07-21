@@ -16,15 +16,11 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 
-/**
- * RetrofitExample
- * https://github.com/Ramadhani-Yassin
- * Created on 05-April-2025.
- */
+ 
 
 public class RestClient {
 
-   public static final String BASE_URL = "http://192.168.108.248/grocerystore/";
+   public static final String BASE_URL = "http://10.106.207.248/grocerystore/";
 
 
 

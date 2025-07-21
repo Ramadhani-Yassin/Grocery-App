@@ -3,8 +3,9 @@ require 'vendor/autoload.php'; // Load Composer autoloader
 require 'config.php';
 require 'phpmailer/mail.php';
 
-error_reporting(E_ALL ^ E_DEPRECATED);
-ini_set('display_errors', 1);
+header('Content-Type: application/json');
+ini_set('display_errors', 0);
+error_reporting(0);
 
 // Slim 3 initialization
 $configuration = [
@@ -134,6 +135,11 @@ $app->post('/userCart', function ($request, $response, $args) {
     return getUserCart($request, $response, $data);
 });
 
+$app->post('/payment', function ($request, $response, $args) {
+    $data = $request->getParsedBody();
+    return submitPayment($request, $response, $data);
+});
+
 $app->get('/debug/routes', function ($request, $response) {
     $routes = [];
     foreach ($this->router->getRoutes() as $route) {
@@ -179,10 +185,10 @@ function login($request, $response, $data) {
 }
 
 function register($request, $response, $data) {
-    $name = $data['name'];
-    $mobile = $data['mobile'];
-    $password = $data['password'];
-    $firebase_token = $data['firebase_token'];
+    $name = isset($data['name']) ? $data['name'] : null;
+    $mobile = isset($data['mobile']) ? $data['mobile'] : null;
+    $password = isset($data['password']) ? $data['password'] : null;
+    $firebase_token = isset($data['firebase_token']) ? $data['firebase_token'] : null;
     $otp = mt_rand(100000, 999999);
     $token = generateApiKey();
 
@@ -1082,4 +1088,29 @@ function product_image($id) {
     $stmt = $db->prepare($sql);
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_OBJ);
+}
+
+function submitPayment($request, $response, $data) {
+    $paymentMode = isset($data['method']) ? $data['method'] : null;
+    $fullName = isset($data['fullName']) ? $data['fullName'] : null;
+    $accountNumber = isset($data['accountNumber']) ? $data['accountNumber'] : null;
+    $user_id = isset($data['user_id']) ? $data['user_id'] : 0;
+    $order_id = isset($data['order_id']) ? $data['order_id'] : 0;
+    $paymentDetails = json_encode([
+        'fullName' => $fullName,
+        'accountNumber' => $accountNumber
+    ]);
+    try {
+        $db = getDB();
+        $sql = "INSERT INTO payment (paymentMode, paymentDetails, user_id, order_id) VALUES (:paymentMode, :paymentDetails, :user_id, :order_id)";
+        $stmt = $db->prepare($sql);
+        $stmt->bindParam("paymentMode", $paymentMode);
+        $stmt->bindParam("paymentDetails", $paymentDetails);
+        $stmt->bindParam("user_id", $user_id);
+        $stmt->bindParam("order_id", $order_id);
+        $stmt->execute();
+        return $response->withJson(['status' => 201, 'message' => 'Payment info saved']);
+    } catch(PDOException $e) {
+        return $response->withJson(['status' => 500, 'message' => $e->getMessage()], 500);
+    }
 }

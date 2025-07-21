@@ -1,10 +1,5 @@
 <resources>
-    <!--
-   * Grocery Store
-   * https://github.com/quintuslabs/GroceryStore
-   * Created on 18-Feb-2019.
-   * Created by : Santosh Kumar Dash:- http://santoshdash.epizy.com
-   -->
+     
     <string name="app_name">Zanzibar Grocery</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -66,4 +61,11 @@
     <string name="selection_count_title">%3$s (%1$d/%2$d)</string>
     <string name="selection_count">%1$d/%2$d</string>
     <string name="permission_not_given">Permission not given</string>
+    <string-array name="payment_methods">
+        <item>MIX BY YAS</item>
+        <item>M-PESA</item>
+        <item>HALOPESA</item>
+        <item>AIRTEL MONEY</item>
+        <item>BANK</item>
+    </string-array>
 </resources>
