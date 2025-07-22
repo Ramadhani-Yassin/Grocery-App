@@ -57,17 +57,35 @@
                     android:layout_marginTop="@dimen/margin_10dp"
                     android:text="pending" />
 
-                <com.frontendsource.grocerystore.customfonts.TextViewRegular
-                    android:id="@+id/viewDetails"
-                    style="@android:style/MediaButton"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/shop_button_bg"
-                    android:padding="10dp"
-                    android:text="View Details"
-                    android:textColor="@color/gen_white" />
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <com.frontendsource.grocerystore.customfonts.TextViewRegular
+                        android:id="@+id/viewDetails"
+                        style="@android:style/MediaButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/shop_button_bg"
+                        android:padding="10dp"
+                        android:text="View Details"
+                        android:textColor="@color/gen_white"
+                        android:gravity="center" />
+
+                    <Button
+                        android:id="@+id/btn_confirm_delivered"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Confirm Delivered"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/gen_white"
+                        android:gravity="center"
+                        android:visibility="gone" />
+                </LinearLayout>
 
 
             </LinearLayout>

@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -18,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.gson.Gson;
 import com.frontendsource.grocerystore.R;
 import com.frontendsource.grocerystore.api.clients.RestClient;
+import com.frontendsource.grocerystore.api.RestService;
 import com.frontendsource.grocerystore.model.Order;
 import com.frontendsource.grocerystore.model.OrderItem;
 import com.frontendsource.grocerystore.model.OrdersResult;
@@ -83,7 +85,32 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.MyViewHolder
             }
         });
 
+        // Show Confirm Delivered button only if status is pending
+        if (order.getStatus().equalsIgnoreCase("pending")) {
+            holder.btnConfirmDelivered.setVisibility(View.VISIBLE);
+        } else {
+            holder.btnConfirmDelivered.setVisibility(View.GONE);
+        }
 
+        holder.btnConfirmDelivered.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                order.setStatus("delivered");
+                RestService restService = RestClient.getRestService(holder.itemView.getContext());
+                restService.updateOrderStatus(order).enqueue(new retrofit2.Callback<Void>() {
+                    @Override
+                    public void onResponse(retrofit2.Call<Void> call, retrofit2.Response<Void> response) {
+                        Toast.makeText(holder.itemView.getContext(), "Order marked as delivered!", Toast.LENGTH_SHORT).show();
+                        holder.status.setText("delivered");
+                        holder.btnConfirmDelivered.setVisibility(View.GONE);
+                    }
+                    @Override
+                    public void onFailure(retrofit2.Call<Void> call, Throwable t) {
+                        Toast.makeText(holder.itemView.getContext(), "Failed to update status", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        });
     }
 
     private void openOrderItemModal(Order order) {
@@ -147,6 +174,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.MyViewHolder
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView orderId, date, total, status, viewDetails;
+        Button btnConfirmDelivered;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -156,7 +184,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.MyViewHolder
             total = itemView.findViewById(R.id.total_amount);
             status = itemView.findViewById(R.id.status);
             viewDetails = itemView.findViewById(R.id.viewDetails);
-
+            btnConfirmDelivered = itemView.findViewById(R.id.btn_confirm_delivered);
         }
     }
 }

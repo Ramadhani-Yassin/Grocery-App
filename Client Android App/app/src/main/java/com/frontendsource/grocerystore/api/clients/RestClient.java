@@ -20,7 +20,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RestClient {
 
-   public static final String BASE_URL = "http://10.106.207.248/grocerystore/";
+   public static final String BASE_URL = "http://10.70.32.248/grocerystore/";
 
 
 

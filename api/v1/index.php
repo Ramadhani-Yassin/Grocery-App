@@ -140,6 +140,11 @@ $app->post('/payment', function ($request, $response, $args) {
     return submitPayment($request, $response, $data);
 });
 
+$app->post('/updateOrderStatus', function ($request, $response, $args) {
+    $data = $request->getParsedBody();
+    return updateOrderStatus($request, $response, $data);
+});
+
 $app->get('/debug/routes', function ($request, $response) {
     $routes = [];
     foreach ($this->router->getRoutes() as $route) {
@@ -1110,6 +1115,25 @@ function submitPayment($request, $response, $data) {
         $stmt->bindParam("order_id", $order_id);
         $stmt->execute();
         return $response->withJson(['status' => 201, 'message' => 'Payment info saved']);
+    } catch(PDOException $e) {
+        return $response->withJson(['status' => 500, 'message' => $e->getMessage()], 500);
+    }
+}
+
+function updateOrderStatus($request, $response, $data) {
+    $order_id = isset($data['id']) ? $data['id'] : null;
+    $status = isset($data['status']) ? $data['status'] : null;
+    if (!$order_id || !$status) {
+        return $response->withJson(['status' => 400, 'message' => 'Missing order_id or status'], 400);
+    }
+    try {
+        $db = getDB();
+        $sql = "UPDATE orders SET status = :status WHERE id = :order_id";
+        $stmt = $db->prepare($sql);
+        $stmt->bindParam("status", $status);
+        $stmt->bindParam("order_id", $order_id);
+        $stmt->execute();
+        return $response->withJson(['status' => 200, 'message' => 'Order status updated']);
     } catch(PDOException $e) {
         return $response->withJson(['status' => 500, 'message' => $e->getMessage()], 500);
     }
